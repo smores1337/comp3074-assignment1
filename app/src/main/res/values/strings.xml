@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">comp3074</string>
+    <string name="title_about">About</string>
+
+    <string name="label_hours">Number of hours worked</string>
+    <string name="label_hourly_rate">Hourly rate</string>
+    <string name="label_tax_rate">Tax rate (e.g. 0.18 for 18%)</string>
+    <string name="button_calculate">Calculate</string>
+    <string name="button_about">About</string>
+    <string name="error_invalid_input">Please enter valid non-negative numbers in all fields.</string>
+
+    <string name="label_pay">Pay</string>
+    <string name="label_overtime_pay">Overtime pay</string>
+    <string name="label_total_pay">Total pay</string>
+    <string name="label_tax">Tax</string>
+
+    <string name="student_name">Benz Stephen Farinas</string>
+    <string name="student_id">Student ID: 101577027</string>
+</resources>
