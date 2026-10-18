@@ -19,7 +19,6 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -41,8 +40,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         // Fully transparent status and navigation bars (no scrim behind them)
         enableEdgeToEdge(
-            statusBarStyle = SystemBarStyle.auto(Color.TRANSPARENT, Color.TRANSPARENT),
-            navigationBarStyle = SystemBarStyle.auto(Color.TRANSPARENT, Color.TRANSPARENT)
+            // Dark icons over the white ActionBar, light icons over the black content
+            statusBarStyle = SystemBarStyle.light(Color.TRANSPARENT, Color.TRANSPARENT),
+            navigationBarStyle = SystemBarStyle.dark(Color.TRANSPARENT)
         )
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             window.isNavigationBarContrastEnforced = false
@@ -154,7 +154,7 @@ fun PayCalculatorScreen(onAboutClick: () -> Unit, modifier: Modifier = Modifier)
             ResultRow(stringResource(R.string.label_tax), values[3])
         }
 
-        OutlinedButton(onClick = onAboutClick, modifier = Modifier.fillMaxWidth()) {
+        Button(onClick = onAboutClick, modifier = Modifier.fillMaxWidth()) {
             Text(stringResource(R.string.button_about))
         }
     }
